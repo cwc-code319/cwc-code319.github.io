@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="referrer" content="no-referrer">
+  <title>部署与访问指南 · 见仁建智</title>
+  <style>
+    :root{--paper:#f4f1e9;--surface:#fffdf8;--ink:#202f2a;--green:#173f35;--muted:#617069;--line:#d9ddd2;--orange:#a65027;--soft:#ecf1e9;--radius:12px}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.75 system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif}a{color:var(--green);text-underline-offset:4px}button,input{font:inherit}button,a,input{touch-action:manipulation}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #b86937;outline-offset:4px}h1,h2,h3,p{margin:0}h1{font:500 clamp(28px,4vw,40px)/1.3 "Noto Serif SC","Songti SC",SimSun,serif}h2{font-size:19px;line-height:1.4}h3{font-size:16px}small{font-size:12px}.frame{max-width:1180px;margin:auto;padding:32px 28px 50px}.masthead{display:flex;justify-content:space-between;gap:24px;align-items:center;border-bottom:2px solid var(--green);padding-bottom:22px}.eyebrow{color:var(--muted);font-size:12px;letter-spacing:.12em;margin-bottom:7px}.brand-name{font-family:"Songti SC",SimSun,serif;color:var(--green);font-size:21px}.brand-meta{color:var(--muted);font-size:12px}.badge{display:inline-flex;align-items:center;gap:8px;padding:5px 11px;border:1px solid var(--line);border-radius:50px;font-size:12px;background:var(--surface);white-space:nowrap}.badge:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green)}.lead{margin:26px 0 20px;max-width:760px;color:var(--muted)}.notice{padding:12px 16px;border-left:3px solid var(--orange);background:#eee5d7;font-size:14px}.notice strong{color:var(--orange)}.layout{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(300px,1fr);gap:22px;margin-top:24px}.main,.aside{min-width:0;display:grid;align-content:start;gap:20px}.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}.panel-head{display:flex;align-items:center;gap:12px;justify-content:space-between;border-bottom:1px solid var(--line);padding:16px 20px}.section-number{font-size:12px;color:var(--orange);font-variant-numeric:tabular-nums;margin-right:9px}.panel-body{padding:20px}.address-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center;padding:17px 0;border-bottom:1px solid var(--line)}.address-row:first-child{padding-top:0}.address-row:last-child{padding-bottom:0;border-bottom:0}.address{display:block;font:600 17px/1.6 ui-monospace,Consolas,monospace;overflow-wrap:anywhere;margin:3px 0}.muted{color:var(--muted)}.caption{font-size:13px;color:var(--muted)}.actions{display:flex;gap:8px;flex-wrap:wrap}.button{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;background:var(--surface);color:var(--green);border:1px solid #b9c5bb;border-radius:6px;padding:7px 12px;min-height:39px;font-size:13px;line-height:1.5}.button:hover{background:var(--soft)}.button.primary{background:var(--green);color:white;border-color:var(--green)}.button.primary:hover{background:#245b4b}.button.danger{color:var(--orange);border-color:#d6b99e}.inline-note{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}.command-label{display:block;font-size:13px;font-weight:600;margin-bottom:7px}.command-box{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:10px}.command-text{margin:0;padding:11px 13px;background:var(--soft);border:1px solid var(--line);border-radius:6px;color:var(--green);font:13px/1.7 ui-monospace,Consolas,"Microsoft YaHei",monospace;white-space:pre-wrap;overflow-wrap:anywhere;user-select:all}.command-block+.command-block{margin-top:17px}.modes{display:flex;flex-wrap:wrap;gap:8px;margin:9px 0 8px;padding:0;border:0}.modes legend{font-size:13px;font-weight:600;margin-bottom:8px}.mode{display:flex;gap:7px;align-items:center;min-height:42px;padding:7px 11px;border:1px solid var(--line);border-radius:6px;font-size:13px}.mode input{margin:0;accent-color:var(--green)}.mode:has(input:checked){background:var(--soft);border-color:#8ca792}.mode-explanation{min-height:45px;margin-bottom:14px;font-size:13px;color:var(--muted)}.boundary-list{margin:0;padding:0;list-style:none}.boundary-list li{padding:12px 0;border-bottom:1px solid var(--line)}.boundary-list li:first-child{padding-top:0}.boundary-list li:last-child{padding-bottom:0;border-bottom:0}.label-row{display:flex;justify-content:space-between;gap:12px;font-size:14px;font-weight:600}.tag{font-size:12px;white-space:nowrap;font-weight:500;color:var(--green)}.tag.warn{color:var(--orange)}.steps{margin:0;padding-left:22px;font-size:14px}.steps li{padding-left:3px;margin-bottom:11px}.steps li:last-child{margin-bottom:0}.check-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:14px}.check-item{padding:11px 13px;background:var(--soft);border:1px solid var(--line);border-radius:7px}.check-value{display:block;font-size:18px;font-weight:650;line-height:1.5}.check-label{display:block;font-size:12px;color:var(--muted)}details{border-top:1px solid var(--line);padding-top:13px;margin-top:15px}summary{font-size:13px;font-weight:600;cursor:pointer}details p{margin-top:10px;font-size:13px;color:var(--muted)}.compact-links{display:flex;gap:16px;flex-wrap:wrap;margin-top:11px;font-size:13px}.footer{display:flex;justify-content:space-between;gap:20px;padding-top:22px;margin-top:24px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}.copy-status{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);max-width:calc(100% - 36px);padding:10px 18px;border-radius:8px;background:var(--green);color:white;box-shadow:0 4px 20px #173f3528;z-index:10}.copy-status:empty{display:none}.noscript{margin-top:15px;font-size:13px;color:var(--orange)}
+    @media(max-width:880px){.layout{grid-template-columns:1fr}.aside{grid-template-columns:repeat(2,minmax(0,1fr))}.aside .wide{grid-column:1/-1}}
+    @media(max-width:560px){.frame{padding:20px 15px 32px}.masthead{align-items:flex-start;gap:12px}.brand-meta{display:none}.badge{white-space:normal;font-size:11px;padding:4px 8px}.layout{gap:16px}.main,.aside{gap:16px}.aside{grid-template-columns:1fr}.panel-head{padding:14px 16px}.panel-body{padding:16px}.address-row{grid-template-columns:1fr;gap:10px}.address-row .actions{justify-content:flex-start}.address{font-size:16px}.command-box{grid-template-columns:1fr}.command-box .button{justify-self:start}.mode-explanation{min-height:0}.footer{flex-direction:column;gap:5px}.lead{margin-top:20px}.panel-head .caption{max-width:120px;text-align:right}}
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+    @media print{body{background:white}.frame{max-width:none;padding:0}.layout{display:block}.panel{margin-top:15px;break-inside:avoid}.actions,.command-box .button,.copy-status,.print-button{display:none}.aside{display:block}.footer{margin-top:15px}.command-box{display:block}.badge{border:0}.notice{background:none}.panel-body,.panel-head{padding:12px}a{color:inherit}details{display:none}}
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <header class="masthead">
+      <div><p class="eyebrow">见仁建智 / 运维手册</p><h1>部署与访问指南</h1></div>
+      <div><div class="brand-name">BIPV 工作台</div><p class="brand-meta">本机常驻 · ZeroTier 协作</p><span class="badge">离线说明 · 非实时状态</span></div>
+    </header>
+    <p class="lead">同一个服务，两个访问入口。Windows 管理后台进程，Codex 用来开发；队友通过已授权的 ZeroTier 网络访问。</p>
+    <div class="notice" role="note"><strong>先说明边界：</strong>关闭 Codex 不等于关闭后台服务；电脑关机、睡眠或断网后，仍然无法访问。登录自启解决的是恢复运行，不是关机期间持续在线。</div>
+    <div class="layout">
+      <main class="main">
+        <section class="panel" aria-labelledby="addresses-heading">
+          <div class="panel-head"><h2 id="addresses-heading"><span class="section-number">01</span>打开项目</h2><span class="caption">固定地址，不代表实时在线</span></div>
+          <div class="panel-body">
+            <div class="address-row"><div><h3>在服务所在电脑上</h3><a class="address" href="http://localhost:8765/" target="_blank" rel="noopener noreferrer">http://localhost:8765/</a><p class="caption">也可使用 127.0.0.1。队友不能用自己的 localhost 访问你的电脑。</p></div><div class="actions"><a class="button primary" href="http://localhost:8765/" target="_blank" rel="noopener noreferrer">打开项目 ↗</a><button class="button" type="button" data-copy="local">复制地址</button></div></div>
+            <div class="address-row"><div><h3>让队友访问</h3><a class="address" href="http://10.92.209.60:8765/" target="_blank" rel="noopener noreferrer">http://10.92.209.60:8765/</a><p class="caption">需要加入同一 ZeroTier 网络，并由网络管理员批准设备。</p></div><div class="actions"><a class="button primary" href="http://10.92.209.60:8765/" target="_blank" rel="noopener noreferrer">打开项目 ↗</a><button class="button" type="button" data-copy="zerotier">复制地址</button></div></div>
+            <p class="inline-note">后台监听 <code>0.0.0.0:8765</code>，同时接收各 IPv4 网卡的连接；<strong>0.0.0.0 不是分享地址，也不等于公网网址。</strong>外部连通仍受网络路由与防火墙限制。</p>
+          </div>
+        </section>
+        <section class="panel" aria-labelledby="control-heading">
+          <div class="panel-head"><h2 id="control-heading"><span class="section-number">02</span>开启、关闭与查询</h2><span class="caption">在你的 Windows 电脑执行</span></div>
+          <div class="panel-body">
+            <p class="caption" style="margin-bottom:16px">下面按钮只复制命令，不会启停服务。打开 PowerShell，先进入项目目录，再执行对应命令。</p>
+            <div class="command-block"><span class="command-label" id="directory-label">先进入修改稿目录</span><div class="command-box"><pre id="directory-command" class="command-text" aria-labelledby="directory-label">Set-Location -LiteralPath 'D:\各种作业与比赛备份\海之子AI大赛\GPT成果\修改稿'</pre><button class="button" type="button" data-copy="directory">复制目录命令</button></div></div>
+            <fieldset class="modes"><legend>生成哪种开放模式的命令？</legend><label class="mode"><input type="radio" name="mode" value="all" checked>全网卡</label><label class="mode"><input type="radio" name="mode" value="zerotier">仅 ZeroTier</label><label class="mode"><input type="radio" name="mode" value="local">仅本机</label></fieldset>
+            <p class="mode-explanation" id="mode-explanation" aria-live="polite">全网卡：监听 0.0.0.0，同时支持本机和 ZeroTier。防火墙默认只额外放行可信 ZeroTier 网段，不向任意公网来源开放。</p>
+            <div class="command-block"><span class="command-label" id="open-label">开启服务，并恢复登录自启</span><div class="command-box"><pre id="open-command" class="command-text" aria-labelledby="open-label">.\service-control.bat open -Mode all -Port 8765</pre><button class="button primary" type="button" data-copy="open">复制开启命令</button></div></div>
+            <div class="command-block"><span class="command-label" id="close-label">关闭服务，同时停用登录自启</span><div class="command-box"><pre id="close-command" class="command-text" aria-labelledby="close-label">.\service-control.bat close</pre><button class="button danger" type="button" data-copy="close">复制关闭命令</button></div></div>
+            <div class="command-block"><span class="command-label" id="status-label">查询后台状态与 HTTP 健康情况</span><div class="command-box"><pre id="status-command" class="command-text" aria-labelledby="status-label">.\service-control.bat status</pre><button class="button" type="button" data-copy="status">复制查询命令</button></div></div>
+            <p class="inline-note">不使用旧的 <code>access-control</code> 同时启动另一个实例。关闭不会清空数据库；同一组地址连接的是同一个业务服务。</p>
+            <noscript><p class="noscript">JavaScript 未启用：访问链接仍可使用，请手动选择并复制命令。以上开启命令为全网卡模式。</p></noscript>
+          </div>
+        </section>
+        <section class="panel" aria-labelledby="teammate-heading">
+          <div class="panel-head"><h2 id="teammate-heading"><span class="section-number">03</span>队友访问检查</h2><span class="caption">不要求连接同一热点</span></div>
+          <div class="panel-body">
+            <ol class="steps"><li>双方安装 ZeroTier，加入同一网络，确认队友设备已获授权。</li><li>你的电脑保持开机、联网，ZeroTier 正常运行，后台服务处于开启状态。</li><li>队友打开 <a href="http://10.92.209.60:8765/" target="_blank" rel="noopener noreferrer">10.92.209.60:8765</a>；如使用代理软件，对这个地址设置直连。</li><li>打不开时，先在队友的 PowerShell 测试 TCP 端口。若失败，检查成员权限、ZeroTier 流规则、链路和双方防火墙。</li></ol>
+            <div class="command-block" style="margin-top:17px"><span class="command-label" id="diagnostic-label">在队友电脑执行</span><div class="command-box"><pre id="diagnostic-command" class="command-text" aria-labelledby="diagnostic-label">Test-NetConnection 10.92.209.60 -Port 8765</pre><button class="button" type="button" data-copy="diagnostic">复制检查命令</button></div></div>
+            <details><summary>已配置的防火墙范围与身份边界</summary><p>本轮新增入站规则仅允许指定 pythonw.exe 的 TCP 8765、目的地址 10.92.209.60、来源网段 10.92.209.0/24；未新增 WLAN 任意来源开放规则。没有关闭 Windows 防火墙。</p><p>当前全网卡／ZeroTier 模式不启用应用账户登录，只面向可信网络。请求令牌和 Host 校验不是身份认证；不要做路由器公网端口转发。公网部署需要另行配置 HTTPS 与账户保护。</p></details>
+          </div>
+        </section>
+      </main>
+      <aside class="aside" aria-label="部署边界及验证记录">
+        <section class="panel" aria-labelledby="boundary-heading"><div class="panel-head"><h2 id="boundary-heading">哪些情形仍可访问？</h2></div><div class="panel-body"><ul class="boundary-list"><li><div class="label-row"><span>关闭 Codex</span><span class="tag">系统托管</span></div><p class="caption">后台进程不依赖开发终端；电脑与网络仍须正常运行。</p></li><li><div class="label-row"><span>开机后登录当前用户</span><span class="tag">已配置自启</span></div><p class="caption">需要先启用服务。主动 close 后不会自动恢复，需再次 open。</p></li><li><div class="label-row"><span>关机、睡眠、休眠或注销</span><span class="tag warn">不可访问</span></div><p class="caption">本机不能在断电或用户会话终止后继续提供服务。</p></li><li><div class="label-row"><span>断网或 ZeroTier 退出</span><span class="tag warn">队友不可访问</span></div><p class="caption">本机访问与外部网络连接是两回事。</p></li></ul></div></section>
+        <section class="panel" aria-labelledby="verification-heading"><div class="panel-head"><h2 id="verification-heading">已有验收记录</h2><span class="caption">2026-10-02</span></div><div class="panel-body"><div class="check-grid"><div class="check-item"><span class="check-value">112 / 112</span><span class="check-label">后端测试通过</span></div><div class="check-item"><span class="check-value">3 个地址</span><span class="check-label">在本机 HTTP 验证成功</span></div><div class="check-item"><span class="check-value">1 个实例</span><span class="check-label">0.0.0.0:8765 监听</span></div><div class="check-item"><span class="check-value">开 → 关 → 开</span><span class="check-label">服务开关实测通过</span></div></div><p class="caption">HTTP 记录时间：20:39:50（北京时间）。这是历史验收摘要，不是当前在线指示。</p><p class="inline-note">未实际关闭 Codex 或重启电脑测试；未从队友设备验证。地址在本机成功，不能替代跨网络验收。</p><details><summary>查看原始摘要文件</summary><div class="compact-links"><a href="_qa/deployment/live-verification.json">HTTP 与系统任务记录</a><a href="_qa/deployment/regression-results.json">112 项测试记录</a></div><p>文件链接在保留项目目录结构时可用；单独转发本 HTML 不会同时携带这些记录。</p></details></div></section>
+        <section class="panel wide" aria-labelledby="cloud-heading"><div class="panel-head"><h2 id="cloud-heading">如果要求关机后仍在线</h2><span class="caption">下一阶段</span></div><div class="panel-body"><p>把应用和数据库迁移到另一台持续运行的服务器，才能让你的电脑关机不影响队友使用。只建立到本机的隧道，不能解决这个问题。</p><div class="compact-links"><a href="https://cloud.tencent.com/product/lighthouse" target="_blank" rel="noopener noreferrer">腾讯云轻量服务器 ↗</a><a href="https://help.aliyun.com/zh/simple-application-server/product-overview/overview" target="_blank" rel="noopener noreferrer">阿里云计费说明 ↗</a></div><p class="inline-note">候选仅做过调研，未开通、未购买、未上传项目。长期托管需确认账号、预算、地域、续费、HTTPS、账户认证及备份；云服务器也不意味着任何地区都保证可访问。</p></div></section>
+      </aside>
+    </div>
+    <footer class="footer"><div>见仁建智 · 静态使用指南<br>此文件可离线打开；访问项目需要服务在线。无需外部字体、图片或脚本。</div><div class="actions"><a class="button" href="docs/persistent-deployment.md">完整部署说明</a><button class="button print-button" type="button" id="print-button">打印 / 保存 PDF</button></div></footer>
+  </div>
+  <div id="copy-status" class="copy-status" role="status" aria-live="polite" aria-atomic="true"></div>
+  <script>
+    (() => {
+      'use strict';
+      const explanations = Object.freeze({
+        all: '全网卡：监听 0.0.0.0，同时支持本机和 ZeroTier。防火墙默认只额外放行可信 ZeroTier 网段，不向任意公网来源开放。',
+        zerotier: '仅 ZeroTier：只绑定 10.92.209.60。开启后请使用 ZeroTier 地址；localhost 入口不适用于此模式。',
+        local: '仅本机：只绑定 127.0.0.1。开启后队友无法通过 ZeroTier 访问。'
+      });
+      const commandIds = Object.freeze({directory:'directory-command', open:'open-command', close:'close-command', status:'status-command', diagnostic:'diagnostic-command'});
+      const addresses = Object.freeze({local:'http://localhost:8765/', zerotier:'http://10.92.209.60:8765/'});
+      const status = document.getElementById('copy-status');
+      let notificationTimer;
+      function notify(message) {
+        clearTimeout(notificationTimer);
+        status.textContent = message;
+        notificationTimer = setTimeout(() => {status.textContent = '';}, 6000);
+      }
+      async function copyText(text) {
+        if (navigator.clipboard && window.isSecureContext) {
+          try {await navigator.clipboard.writeText(text); return true;} catch (_) { /* Local-file/permission fallback below. */ }
+        }
+        const activeElement = document.activeElement;
+        const input = document.createElement('textarea');
+        input.value = text; input.setAttribute('aria-hidden', 'true'); input.setAttribute('readonly', '');
+        input.style.cssText = 'position:fixed;left:-9999px;top:0;';
+        document.body.appendChild(input); input.select();
+        let copied = false;
+        try {copied = document.execCommand('copy');} catch (_) {copied = false;}
+        finally {input.remove(); if (activeElement && activeElement.focus) activeElement.focus({preventScroll:true});}
+        return copied;
+      }
+      document.querySelectorAll('input[name="mode"]').forEach(input => {
+        input.addEventListener('change', () => {
+          if (!Object.hasOwn(explanations, input.value)) return;
+          document.getElementById('open-command').textContent = '.\\service-control.bat open -Mode ' + input.value + ' -Port 8765';
+          document.getElementById('mode-explanation').textContent = explanations[input.value];
+        });
+      });
+      document.querySelectorAll('[data-copy]').forEach(button => {
+        button.addEventListener('click', async () => {
+          const key = button.dataset.copy;
+          const text = Object.hasOwn(addresses, key) ? addresses[key] : (Object.hasOwn(commandIds, key) ? document.getElementById(commandIds[key]).textContent : '');
+          if (!text) return;
+          const copied = await copyText(text);
+          notify(copied ? '已复制。命令请在 PowerShell 执行；服务状态未被更改。' : '浏览器未允许复制，请手动选中上方地址或命令并复制。');
+        });
+      });
+      document.getElementById('print-button').addEventListener('click', () => window.print());
+    })();
+  </script>
+</body>
+</html>
